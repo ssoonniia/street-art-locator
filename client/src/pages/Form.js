@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {createUser} from '../actions/userActions'
 
 class Form extends Component {
   state = {
@@ -16,18 +18,18 @@ class Form extends Component {
 	}
 
 	handleOnSubmit = ( event ) => {
-		event.preventDefault()
+	
 		if( this.validate() ){
 			alert('I was submitted')
-			
+			event.preventDefault()
 		}
-	
 	}
 
 	validate = () => {
 		if( !this.state.name || !this.state.age ){
 			return alert('Please complete all fields')
 		}
+		return true
 	}
 
 	render(){
@@ -46,4 +48,9 @@ class Form extends Component {
 		);
 	}
 }
-export default Form;
+
+function mapStateToProps( state ){
+	return { name: state.name, age: state.age }
+}
+
+export default connect(mapStateToProps, {createUser})(Form);
