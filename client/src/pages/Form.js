@@ -18,9 +18,8 @@ class Form extends Component {
 	}
 
 	handleOnSubmit = ( event ) => {
-	
 		if( this.validate() ){
-			alert('I was submitted')
+			this.props.createUser(this.state.name, this.state.age)
 			event.preventDefault()
 		}
 	}
