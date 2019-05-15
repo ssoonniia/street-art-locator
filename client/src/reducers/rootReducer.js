@@ -6,7 +6,7 @@ export default function rootReducer( state = {
     case 'CREATE_USER':
       return { ...state, isFetchingUser: true  }  
     case 'SET_USER':
-      return { isFetchingUser: false, user: action.data  }  
+      return { isFetchingUser: false, user: action.payload  }  
     default: 
     return state
   }
