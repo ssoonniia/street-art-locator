@@ -16,8 +16,18 @@ class Form extends Component {
 	}
 
 	handleOnSubmit = ( event ) => {
-		alert('I was submitted')
 		event.preventDefault()
+		if( this.validate() ){
+			alert('I was submitted')
+			
+		}
+	
+	}
+
+	validate = () => {
+		if( !this.state.name || !this.state.age ){
+			return alert('Please complete all fields')
+		}
 	}
 
 	render(){
