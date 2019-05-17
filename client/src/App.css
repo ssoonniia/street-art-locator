@@ -1,12 +1,7 @@
-.App {
-  text-align: center;
-  
-}
 html {
   background: url(http://santiagotourist.com/wp-content/uploads//2012/10/IMG_6220-e1352162571662.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.7;
 }
