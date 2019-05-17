@@ -1,28 +1,24 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
-const Button = props => {
+const HomeButton = props => {
 
   const buttonStyle ={
     display: 'inline-block',
     position: 'absolute',
     top: '50%',
-    height: '5%',
-    width: '15%',
-    backgroundColor: '#2D9BF0',
-    boxShadow: '4px 4px 19px 1px #000000'
   }
   const wrapper = {
-    textAlign : 'center'
+    textAlign : 'left',
+    marginLeft: '20%'
   }
-  
+
   return(
     <div style={wrapper}>
-      <button style={buttonStyle}
-        className="btn btn-default"
-      >
-      Get Started
-      </button>
+      <Button style={buttonStyle}variant="contained" color="primary" >
+        Get Started
+      </Button>
     </div>
   );
 }
-export default Button; 
+export default HomeButton; 
