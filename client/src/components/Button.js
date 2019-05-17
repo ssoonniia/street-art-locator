@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 const HomeButton = props => {
 
@@ -15,7 +16,7 @@ const HomeButton = props => {
 
   return(
     <div style={wrapper}>
-      <Button style={buttonStyle}variant="contained" color="primary" >
+      <Button component={Link} to="/map" style={buttonStyle}variant="contained" color="primary" >
         Get Started
       </Button>
     </div>
