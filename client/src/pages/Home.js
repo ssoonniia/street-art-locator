@@ -1,11 +1,10 @@
 import React from 'react';
-import Form from './Form'
+import Button from '../components/Button'
 
 const HomePage = props => {
   return (
     <div>
-      Hello
-    <Form/>
+    <Button/>
     </div>
   )
 }
