@@ -9,7 +9,7 @@ export function createUser(name, age){
       body: body
     })
     .then(response => response.json())
-    .then(data => dispatch({ type: 'SET_USER', data: data}))
+    .then(data => dispatch({ type: 'SET_USER', payload: data}))
   }
 }
 
