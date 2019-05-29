@@ -9,14 +9,18 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer'
 import 'typeface-roboto';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { loadState, saveState } from './localStorage'; 
 
+const persistedState = loadState();
 
 const store = createStore(
   rootReducer,
+  persistedState,
   applyMiddleware(thunk)
 );
 
 store.subscribe(() => {
+  saveState(store.getState())
   console.log('store change', store.getState());
 });
 
